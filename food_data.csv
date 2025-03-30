@@ -1,0 +1,100 @@
+Food_items,Category,Calories,Fats,Protein,Iron,Carbohydrates,Fibre,Sugar,Meal_Type,Sodium,Vegetarian,Vegan
+Chicken Breast,Protein,279,11.2,26.6,1.3,46.2,7.5,7.4,All,371,FALSE,FALSE
+Salmon,Protein,324,21.6,9.5,8.7,36.3,5.1,46.5,Lunch,228,FALSE,FALSE
+Eggs,Protein,531,31.6,48.2,1.4,74.2,4.7,47.8,Lunch,260,TRUE,FALSE
+Tofu,Protein,187,4.9,40.4,7.6,62.6,14.9,38.2,Snack,239,TRUE,TRUE
+Lentils,Protein,309,15.6,44.8,9.1,76.1,14.2,8.6,Breakfast,234,TRUE,TRUE
+Beef,Protein,425,9,31.1,9,24.6,11.9,15.9,Lunch,43,FALSE,FALSE
+Pork Chop,Protein,218,10.3,5.5,9.7,45.8,2.1,13.9,Snack,69,FALSE,FALSE
+Turkey,Protein,521,30.4,5.9,2.3,71.5,9.8,6.2,All,327,FALSE,FALSE
+Shrimp,Protein,361,7,42.9,0.3,70.6,12.5,48.2,Snack,337,FALSE,FALSE
+Tuna,Protein,397,17.4,16.3,1,19.8,5.5,28.7,Dinner,56,FALSE,FALSE
+Greek Yogurt,Protein,311,18.1,6.4,7.3,17.6,12,39.3,Breakfast,474,TRUE,FALSE
+Cottage Cheese,Protein,327,31.3,39.5,0.5,8.6,12.3,8.7,Snack,425,TRUE,FALSE
+Almonds,Protein,69,1.5,13.2,2.1,79.2,10.6,35,Lunch,484,TRUE,TRUE
+Peanut Butter,Protein,245,22.5,16.6,5.8,40.1,5.6,1,All,383,TRUE,TRUE
+Walnuts,Protein,550,22.4,7.2,8.1,36,4.1,40,Breakfast,321,TRUE,TRUE
+Chia Seeds,Protein,323,10.8,27,2,31.7,10.1,14.8,Snack,315,TRUE,TRUE
+Sunflower Seeds,Protein,466,23.8,48.6,3.8,66.2,12.8,8.2,Snack,133,TRUE,TRUE
+Chickpeas,Protein,137,35.1,14,9.5,46.9,12.3,42.8,Breakfast,263,TRUE,TRUE
+Brown Rice,Grain,308,35.9,9.1,0.7,47.6,6.4,12.6,Lunch,408,TRUE,TRUE
+Quinoa,Grain,91,36.8,27.9,5.6,58.4,13.5,13.8,Snack,34,TRUE,TRUE
+Oats,Grain,449,21.5,23.8,7.7,70.9,9.3,9,Dinner,99,TRUE,TRUE
+Whole Wheat Bread,Grain,112,29.7,36.4,6.5,78,6.4,5.9,Snack,162,TRUE,TRUE
+Barley,Grain,479,20.2,37.1,2.3,47.3,5.8,38,Dinner,198,TRUE,TRUE
+Cornmeal,Grain,440,32.9,37.4,7.7,18.5,3.4,22.7,Dinner,354,TRUE,TRUE
+Millet,Grain,153,7.5,16.6,2,4.5,9.5,7.6,Lunch,43,TRUE,TRUE
+Buckwheat,Grain,78,18.8,13.2,6.4,13,6.2,39.7,Snack,126,TRUE,TRUE
+Couscous,Grain,349,35.4,4.4,3.5,50,2.2,46.6,Lunch,269,TRUE,TRUE
+Broccoli,Vegetable,412,20.1,48.4,7.4,11.5,14.8,30.6,Lunch,309,TRUE,TRUE
+Spinach,Vegetable,89,10.8,29.3,7.6,18.4,8,25.3,Snack,141,TRUE,TRUE
+Carrots,Vegetable,550,23.8,25.7,7.8,33.5,9.2,42.3,Lunch,411,TRUE,TRUE
+Bell Peppers,Vegetable,202,11.8,5.5,5.8,58.3,0.2,43.1,All,473,TRUE,TRUE
+Tomatoes,Vegetable,494,10.7,37.6,2.5,45.7,3.2,44,Dinner,199,TRUE,TRUE
+Cabbage,Vegetable,81,3.9,49.1,7.6,49.2,11.2,30.3,Dinner,98,TRUE,TRUE
+Cucumber,Vegetable,56,13.8,14.6,4.2,28.8,10.2,43,Breakfast,56,TRUE,TRUE
+Cauliflower,Vegetable,170,12,15.6,3.2,42.7,10.6,31.2,Lunch,334,TRUE,TRUE
+Mushrooms,Vegetable,490,4.9,19.4,3,7.8,3.8,20.8,Dinner,319,TRUE,TRUE
+Zucchini,Vegetable,52,18.8,43,9.2,35.5,12.6,11.9,All,34,TRUE,TRUE
+Eggplant,Vegetable,452,15.2,35.8,7.1,19.5,0.3,44.8,Breakfast,232,TRUE,TRUE
+Green Beans,Vegetable,187,6.6,35.7,1.2,57.2,8.5,10.4,Dinner,486,TRUE,TRUE
+Sweet Potato,Vegetable,265,12.6,40.7,7.1,52.5,10.6,14.8,Snack,479,TRUE,TRUE
+Asparagus,Vegetable,481,14,36.6,2.4,24.1,0.9,13,All,10,TRUE,TRUE
+Lettuce,Vegetable,357,18.3,14.7,5,52.9,5.9,42.9,All,420,TRUE,TRUE
+Onion,Vegetable,275,39,30.7,7.1,7.9,1.5,33.3,Breakfast,179,TRUE,TRUE
+Garlic,Vegetable,66,20.5,5.5,3.1,46.3,5,44.2,Lunch,348,TRUE,TRUE
+Kale,Vegetable,56,33.9,8.6,6,1,3.8,37.8,Breakfast,480,TRUE,TRUE
+Brussels Sprouts,Vegetable,576,25,33.5,7.5,49.2,2.4,44,Snack,466,TRUE,TRUE
+Peas,Vegetable,77,4.6,27.8,9.7,33.1,11.6,33.9,Snack,373,TRUE,TRUE
+Banana,Fruit,334,5.4,17.2,4.9,59.9,4.6,22.4,Snack,471,TRUE,TRUE
+Apple,Fruit,586,25.5,31.3,5.6,69,12.5,33.9,Dinner,203,TRUE,TRUE
+Orange,Fruit,202,27.3,17.9,1.6,11.5,3.9,33.8,Breakfast,457,TRUE,TRUE
+Strawberries,Fruit,564,4.3,8,7.3,49.8,3.9,24.8,Snack,217,TRUE,TRUE
+Blueberries,Fruit,487,7.6,12,8,2.9,0.3,40.1,Dinner,48,TRUE,TRUE
+Pineapple,Fruit,100,25.1,47.5,8.4,18.6,2.6,25.8,Snack,145,TRUE,TRUE
+Mango,Fruit,193,39.6,5.1,0.9,77,10.5,43.2,Breakfast,224,TRUE,TRUE
+Grapes,Fruit,78,27.1,18.2,0.4,65.2,8,12.4,Breakfast,343,TRUE,TRUE
+Watermelon,Fruit,237,21.3,33.7,5.4,58.1,5,11.2,Breakfast,49,TRUE,TRUE
+Avocado,Fruit,594,35.7,46.1,9.8,25.4,14.9,21.3,Lunch,372,TRUE,TRUE
+Papaya,Fruit,352,15.6,24.8,5.6,65.6,9.8,17.3,Breakfast,247,TRUE,TRUE
+Pomegranate,Fruit,459,28.7,22.4,4.7,79.9,9.1,32,Snack,105,TRUE,TRUE
+Kiwi,Fruit,184,31.6,9,8.9,34.6,7.5,0.2,Dinner,235,TRUE,TRUE
+Peach,Fruit,418,23.2,5.5,6.3,47.9,3.4,11.1,All,310,TRUE,TRUE
+Plum,Fruit,230,25.1,28.2,0.5,13.8,3.7,15.9,Dinner,201,TRUE,TRUE
+Cherries,Fruit,421,3.9,14.4,6,74.5,12.2,31.9,Breakfast,318,TRUE,TRUE
+Cranberries,Fruit,261,24.6,12.4,8.5,7.1,3.4,16.7,Snack,309,TRUE,TRUE
+Raspberry,Fruit,578,30.6,21.4,6.8,7.7,9.8,32.6,Breakfast,273,TRUE,TRUE
+Blackberry,Fruit,136,31.3,45,8,22.9,9.7,35.8,Snack,101,TRUE,TRUE
+Dates,Fruit,440,3.9,40,1.7,11,4,40.2,Lunch,340,TRUE,TRUE
+Milk,Dairy,351,38.7,34.8,1.5,77,12.3,3.3,Breakfast,34,TRUE,FALSE
+Cheddar Cheese,Dairy,169,15.3,29.1,5.9,58.1,12.1,16.4,Dinner,245,TRUE,FALSE
+Mozzarella,Dairy,411,24.9,7.5,8.9,24.6,7,32.2,Dinner,378,TRUE,FALSE
+Butter,Dairy,135,27.1,31.5,6.3,48.9,9,39,All,291,TRUE,FALSE
+Cream Cheese,Dairy,213,22.1,24,3,40.5,4.4,40.6,Snack,234,TRUE,FALSE
+Parmesan,Dairy,90,32.3,31.1,5.8,52.5,10.2,42.4,Breakfast,493,TRUE,FALSE
+Yogurt,Dairy,187,18.5,48.8,5.4,60.9,3.6,10.1,Breakfast,386,TRUE,FALSE
+Buttermilk,Dairy,343,7.8,30.9,9,67.1,9.9,5.6,Dinner,64,TRUE,FALSE
+Cashews,Nuts,357,29.4,43.5,4.7,69.9,11.2,30.6,Lunch,271,TRUE,TRUE
+Macadamia Nuts,Nuts,422,31.9,41.3,0.4,62.5,14.9,35.6,Lunch,191,TRUE,TRUE
+Pecans,Nuts,100,39.7,3.9,0.4,21.1,7.1,43,Snack,108,TRUE,TRUE
+Brazil Nuts,Nuts,422,26.9,20.3,1.1,78.3,4.1,24.6,Lunch,484,TRUE,TRUE
+Flax Seeds,Nuts,164,38.9,25.4,7.2,21,14.1,25.2,Dinner,86,TRUE,TRUE
+Hemp Seeds,Nuts,237,0.4,39.2,3,71.4,4.5,36.1,Dinner,331,TRUE,TRUE
+Sesame Seeds,Nuts,480,34.6,31.2,5.1,9.8,6.8,15.3,Breakfast,410,TRUE,TRUE
+Pumpkin Seeds,Nuts,518,18.8,15,9.6,12.6,11.6,1.3,All,443,TRUE,TRUE
+Sardines,Seafood,495,16.8,2.7,3.7,74.1,11.4,22.7,Breakfast,51,FALSE,FALSE
+Mackerel,Seafood,463,30.2,18.1,6.6,16.1,2.1,30.4,Snack,478,FALSE,FALSE
+Lobster,Seafood,555,14.2,13.9,6.5,67.4,0.1,28.7,Snack,315,FALSE,FALSE
+Crab,Seafood,269,5.4,48.9,2.5,58.9,3,14,All,216,FALSE,FALSE
+Oysters,Seafood,429,3,30.7,6.2,37,9.9,26.7,Dinner,320,FALSE,FALSE
+Clams,Seafood,538,5.2,45,9,12.1,9.8,39.7,Breakfast,49,FALSE,FALSE
+Squid,Seafood,350,26.7,50,4,47.3,11.3,43,All,449,FALSE,FALSE
+Scallops,Seafood,380,25.3,15.7,0.3,4.9,13.9,46.1,All,277,FALSE,FALSE
+Green Tea,Beverage,469,0.8,39.3,5.1,34.2,13.9,4.2,Lunch,22,TRUE,TRUE
+Black Coffee,Beverage,166,3.1,16.4,1.2,20,2,28.2,Breakfast,376,TRUE,TRUE
+Orange Juice,Beverage,327,15.9,25.6,5.4,17.1,1.5,13.1,Lunch,225,TRUE,TRUE
+Apple Juice,Beverage,67,17.1,46.9,7.5,30.8,7.1,16.3,All,89,TRUE,TRUE
+Milkshake,Beverage,203,29.6,24.3,4.3,61.6,13.6,19.1,Breakfast,425,TRUE,FALSE
+Smoothie,Beverage,436,3.1,20.1,1.5,40.7,2.7,41.5,Lunch,141,TRUE,TRUE
+Coconut Water,Beverage,57,5.1,6.5,2.9,53.7,5,0.1,Dinner,87,TRUE,TRUE
+Almond Milk,Beverage,145,22.8,8.7,7.1,17.8,12.4,21,Dinner,3,TRUE,TRUE
