@@ -460,6 +460,10 @@
         background-color: var(--primary-light);
     }
 
+    .weekly-diet-table table{
+        width: auto;
+    }
+
     .weekly-diet-table table,
     tr,
     td,
@@ -475,5 +479,6 @@
         color: var(--primary-dark);
         font-weight: bold;
         background-color: #f1fff1;
+        text-align: center;
 
     }

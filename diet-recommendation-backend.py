@@ -25,7 +25,7 @@ def load_food_data():
     try:
         # Try to load the included food data
         current_dir = os.path.dirname(os.path.abspath(__file__))
-        food_data = pd.read_csv(os.path.join(current_dir, "food_data.csv"))
+        food_data = pd.read_csv(os.path.join(current_dir, "food_data_3.csv"))
         print("Food database loaded successfully!")
         return True
     except:
@@ -507,72 +507,78 @@ def score_foods(foods_df, nutrition_req, goal):
 def categorize_foods_by_meal(scored_foods):
     """Categorize foods by meal type"""
     meal_categories = {"breakfast": [], "lunch": [], "dinner": [], "snacks": []}
-    
+
     # Sort foods by score (descending)
     sorted_foods = scored_foods.sort_values(by="score", ascending=False)
-    
+
     # Assign foods to meal categories based on Meal_Type
     for _, food in sorted_foods.iterrows():
         food_dict = food.to_dict()
         meal_types = food["Meal_Type"].split(",")
-        
+
         if "Breakfast" in meal_types:
             meal_categories["breakfast"].append(food_dict)
-            
+
         if "Lunch" in meal_types:
             meal_categories["lunch"].append(food_dict)
-            
+
         if "Dinner" in meal_types:
             meal_categories["dinner"].append(food_dict)
-            
+
         if "Snack" in meal_types:
             meal_categories["snacks"].append(food_dict)
-    
+
     # In case of missing meal type assignments, add top foods to appropriate meals
     all_foods = sorted_foods.to_dict("records")
-    
+
     for meal_type in meal_categories:
         if len(meal_categories[meal_type]) < 5:
             for food in all_foods:
-                if food not in meal_categories[meal_type] and len(meal_categories[meal_type]) < 5:
+                if (
+                    food not in meal_categories[meal_type]
+                    and len(meal_categories[meal_type]) < 5
+                ):
                     meal_categories[meal_type].append(food)
-    
+
     return meal_categories
 
 
 def generate_weekly_meal_plan(categorized_foods, nutrition_req):
     """Generate a weekly meal plan from Monday to Sunday"""
-    days_of_week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+    days_of_week = [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+    ]
     weekly_plan = {}
-    
+
     # Create a plan for each day
     for day in days_of_week:
         # Initialize daily structure
-        weekly_plan[day] = {
-            "breakfast": [],
-            "lunch": [],
-            "dinner": [],
-            "snacks": []
-        }
-        
+        weekly_plan[day] = {"breakfast": [], "lunch": [], "dinner": [], "snacks": []}
+
         # Fill in each meal with 2-3 items from appropriate category
         # Add some variety by shuffling the foods
         breakfast_options = categorized_foods["breakfast"].copy()
         lunch_options = categorized_foods["lunch"].copy()
         dinner_options = categorized_foods["dinner"].copy()
         snack_options = categorized_foods["snacks"].copy()
-        
+
         random.shuffle(breakfast_options)
         random.shuffle(lunch_options)
         random.shuffle(dinner_options)
         random.shuffle(snack_options)
-        
+
         # Take top 3 items for each meal type to ensure variety across the week
         weekly_plan[day]["breakfast"] = breakfast_options[:3]
         weekly_plan[day]["lunch"] = lunch_options[:3]
         weekly_plan[day]["dinner"] = dinner_options[:3]
         weekly_plan[day]["snacks"] = snack_options[:2]
-        
+
     return weekly_plan
 
 
@@ -580,18 +586,20 @@ def calculate_weekly_nutritional_totals(weekly_plan):
     """Calculate nutritional totals for the week and for each day"""
     # Initialize daily and weekly totals
     nutritional_totals = {
-        "weekly": {
-            "protein": 0,
-            "carbs": 0,
-            "fat": 0,
-            "fiber": 0,
-            "calories": 0
-        },
-        "daily": {}
+        "weekly": {"protein": 0, "carbs": 0, "fat": 0, "fiber": 0, "calories": 0},
+        "daily": {},
     }
-    
-    days_of_week = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-    
+
+    days_of_week = [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+    ]
+
     # Calculate totals for each day
     for day in days_of_week:
         daily_totals = {
@@ -600,9 +608,9 @@ def calculate_weekly_nutritional_totals(weekly_plan):
             "fat": 0,
             "fiber": 0,
             "calories": 0,
-            "meal_calories": {"breakfast": 0, "lunch": 0, "dinner": 0, "snacks": 0}
+            "meal_calories": {"breakfast": 0, "lunch": 0, "dinner": 0, "snacks": 0},
         }
-        
+
         for meal, foods in weekly_plan[day].items():
             meal_calories = 0
             for food in foods:
@@ -612,28 +620,28 @@ def calculate_weekly_nutritional_totals(weekly_plan):
                 daily_totals["fiber"] += food["Fibre"]
                 daily_totals["calories"] += food["Calories"]
                 meal_calories += food["Calories"]
-            
+
             daily_totals["meal_calories"][meal] = meal_calories
-        
+
         # Add to weekly totals
         nutritional_totals["weekly"]["protein"] += daily_totals["protein"]
         nutritional_totals["weekly"]["carbs"] += daily_totals["carbs"]
         nutritional_totals["weekly"]["fat"] += daily_totals["fat"]
         nutritional_totals["weekly"]["fiber"] += daily_totals["fiber"]
         nutritional_totals["weekly"]["calories"] += daily_totals["calories"]
-        
+
         # Store daily totals
         nutritional_totals["daily"][day] = daily_totals
-    
+
     # Calculate daily averages
     nutritional_totals["daily_average"] = {
         "protein": round(nutritional_totals["weekly"]["protein"] / 7, 1),
         "carbs": round(nutritional_totals["weekly"]["carbs"] / 7, 1),
         "fat": round(nutritional_totals["weekly"]["fat"] / 7, 1),
         "fiber": round(nutritional_totals["weekly"]["fiber"] / 7, 1),
-        "calories": round(nutritional_totals["weekly"]["calories"] / 7)
+        "calories": round(nutritional_totals["weekly"]["calories"] / 7),
     }
-    
+
     return nutritional_totals
 
 
@@ -711,13 +719,13 @@ def generate_weekly_plan_route():
 
         # Score foods
         scored_foods = score_foods(filtered_foods, nutrition_req, goal)
-        
+
         # Categorize foods by meal type
         categorized_foods = categorize_foods_by_meal(scored_foods)
-        
+
         # Generate weekly meal plan
         weekly_plan = generate_weekly_meal_plan(categorized_foods, nutrition_req)
-        
+
         # Calculate nutritional totals
         nutritional_totals = calculate_weekly_nutritional_totals(weekly_plan)
 
@@ -768,7 +776,10 @@ def get_visualizations_data():
         },
         "daily_calories": {
             "labels": list(nutritional_totals["daily"].keys()),
-            "values": [nutritional_totals["daily"][day]["calories"] for day in nutritional_totals["daily"]],
+            "values": [
+                nutritional_totals["daily"][day]["calories"]
+                for day in nutritional_totals["daily"]
+            ],
         },
         "nutrient_comparison": {
             "nutrients": ["Protein (g)", "Carbs (g)", "Fat (g)", "Fiber (g)"],
@@ -789,10 +800,22 @@ def get_visualizations_data():
             "days": list(nutritional_totals["daily"].keys()),
             "meal_types": ["breakfast", "lunch", "dinner", "snacks"],
             "values": [
-                [nutritional_totals["daily"][day]["meal_calories"]["breakfast"] for day in nutritional_totals["daily"]],
-                [nutritional_totals["daily"][day]["meal_calories"]["lunch"] for day in nutritional_totals["daily"]],
-                [nutritional_totals["daily"][day]["meal_calories"]["dinner"] for day in nutritional_totals["daily"]],
-                [nutritional_totals["daily"][day]["meal_calories"]["snacks"] for day in nutritional_totals["daily"]],
+                [
+                    nutritional_totals["daily"][day]["meal_calories"]["breakfast"]
+                    for day in nutritional_totals["daily"]
+                ],
+                [
+                    nutritional_totals["daily"][day]["meal_calories"]["lunch"]
+                    for day in nutritional_totals["daily"]
+                ],
+                [
+                    nutritional_totals["daily"][day]["meal_calories"]["dinner"]
+                    for day in nutritional_totals["daily"]
+                ],
+                [
+                    nutritional_totals["daily"][day]["meal_calories"]["snacks"]
+                    for day in nutritional_totals["daily"]
+                ],
             ],
         },
     }
